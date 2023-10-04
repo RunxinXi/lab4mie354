@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="process1" name="process1" isExecutable="true">
+    <startEvent id="startevent1" name="Start"></startEvent>
+    <serviceTask id="servicetask1" name="Update Proposal Database" activiti:class="edu.toronto.lab.servicetasks.UpdateProposalDatabase"></serviceTask>
+    <sequenceFlow id="flow1" sourceRef="usertask1" targetRef="servicetask1"></sequenceFlow>
+    <userTask id="usertask1" name="Input Proposal Ranking">
+      <extensionElements>
+        <activiti:formProperty id="pId1" name="pName1"></activiti:formProperty>
+        <activiti:formProperty id="pId2" name="pRank1"></activiti:formProperty>
+        <activiti:formProperty id="pId3" name="pName2"></activiti:formProperty>
+        <activiti:formProperty id="pId4" name="pRank2"></activiti:formProperty>
+        <activiti:formProperty id="pId5" name="pName3"></activiti:formProperty>
+        <activiti:formProperty id="pId6" name="pRank3"></activiti:formProperty>
+        <activiti:formProperty id="pId7" name="pName4"></activiti:formProperty>
+        <activiti:formProperty id="pId8" name="pRank4"></activiti:formProperty>
+        <activiti:formProperty id="pId9" name="pName5"></activiti:formProperty>
+        <activiti:formProperty id="pId10" name="pRank5"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow4" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
+    <endEvent id="endevent2" name="End"></endEvent>
+    <sequenceFlow id="flow5" sourceRef="servicetask1" targetRef="endevent2"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process1">
+    <bpmndi:BPMNPlane bpmnElement="process1" id="BPMNPlane_process1">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="20.0" y="180.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="65.0" width="105.0" x="320.0" y="165.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="60.0" width="115.0" x="110.0" y="170.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="470.0" y="180.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="225.0" y="200.0"></omgdi:waypoint>
+        <omgdi:waypoint x="289.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="263.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="55.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="110.0" y="200.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="425.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

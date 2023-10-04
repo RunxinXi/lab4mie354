@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS Proposal;
+
+CREATE TABLE IF NOT EXISTS Proposal (
+pName TEXT,
+pCost INT,
+pRank TEXT);
+
+INSERT INTO Proposal VALUES ('MontrealProposal', 100, NULL);
+INSERT INTO Proposal VALUES ('TorontoProposal', 5, NULL);
+INSERT INTO Proposal VALUES ('QuebecProposal', 20, NULL);
+INSERT INTO Proposal VALUES ('VancouverProposal',30, NULL);
+INSERT INTO Proposal VALUES ('VaughanProposal',45, NULL);
+INSERT INTO Proposal VALUES ('HalifaxProposal',35, NULL);
+INSERT INTO Proposal VALUES ('CalgaryProposal',70, NULL);
+INSERT INTO Proposal VALUES ('EdmontonProposal',90, NULL);
